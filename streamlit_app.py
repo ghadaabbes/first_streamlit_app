@@ -64,7 +64,7 @@ if streamlit.button('Get Fruit Load List'):
   streamlit.dataframe(my_data_rows)
   
 streamlit.text("Hello from Snowflake:")
-streamlit.text(my_data_rows)
+#streamlit.text(my_data_rows)
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_row2 = my_cur.fetchone()
 streamlit.text("the fruit load list contains:")
