@@ -72,6 +72,7 @@ if streamlit.button('Get Fruit Load List'):
   my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
   #my_data_row = my_cur.fetchone()
   my_data_rows = get_fruit_load_list()
+  my_cnx.close()
   streamlit.dataframe(my_data_rows)
   
 #streamlit.text("Hello from Snowflake:")
